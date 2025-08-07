@@ -1,9 +1,6 @@
+## Explain Various Computer-based Social Engineering Techniques
 
-# Computer-based Social Engineering Techniques
-
-## 📌 Explain Various Computer-based Social Engineering Techniques
-
-### 🎯 Phishing
+### Phishing
 Phishing is a fraudulent attempt to obtain sensitive information by disguising as a trustworthy entity in electronic communication.
 
 #### 🔹 Types of Phishing
@@ -19,15 +16,15 @@ Phishing is a fraudulent attempt to obtain sensitive information by disguising a
 - **Consent Phishing**: Tricking users into granting access to malicious applications.
 - **Search Engine Phishing**: Using SEO to make fake websites appear in search results.
 
-### 🛠️ Phishing Tools
+### Phishing Tools
 - **Shellphish**: Tool for phishing website generation.
 - **Social Engineering Toolkit (SET)**: Framework for automating social engineering attacks.
 - **Additional Toolkits**: Other kits commonly used for phishing include Gophish, Evilginx2, and BlackEye.
 
-### ✉️ Crafting Emails Using ChatGPT
+### Crafting Emails Using ChatGPT
 Attackers use AI models like ChatGPT to create highly convincing phishing emails with personalized and grammatically correct language.
 
-### 🚨 Other Techniques
+### Other Techniques
 - **Pop-up Windows**: Fake popups to collect credentials or display fake warnings.
 - **Hoax Letters**: False messages to manipulate user emotions.
 - **Chain Letters**: Message encouraging the recipient to forward to others, spreading misinformation or malware.
@@ -35,7 +32,7 @@ Attackers use AI models like ChatGPT to create highly convincing phishing emails
 - **Spam Mail**: Mass distribution of malicious or misleading content.
 - **Scareware**: Tricks user into buying or downloading software claiming to remove non-existent threats.
 
-### 🧠 Perform Impersonation Using AI
+### Perform Impersonation Using AI
 
 #### Deepfake Video Creation Tools
 - **DeepFaceLab**: Tool for creating deepfake videos.
@@ -45,12 +42,12 @@ Attackers use AI models like ChatGPT to create highly convincing phishing emails
 - **VEED.io**: AI tool for voice generation.
 - **Other Tools**: ElevenLabs, iSpeech, Lyrebird.
 
-### 👤 Impersonation on Social Networking Sites
+### Impersonation on Social Networking Sites
 - **Angler Phishing**: Impersonating customer support or businesses.
 - **Catfishing Attack**: Creating fake identities for deception.
   - **Signs of Catfishing**: Inconsistencies, too-good-to-be-true stories, reluctance to video chat.
 
-### 🆔 Identity Theft
+### Identity Theft
 
 #### Types of Identity Theft
 - **Child Identity Theft**: Using a child’s identity for fraud.
@@ -62,7 +59,7 @@ Attackers use AI models like ChatGPT to create highly convincing phishing emails
 - **Tax Identity Theft**: Filing fraudulent tax returns.
 - **Social Security Identity Theft**: Misusing someone’s SSN for benefits.
 
-### 🕵️‍♂️ Common Techniques Used to Obtain Personal Information
+### Common Techniques Used to Obtain Personal Information
 - **Internet Searches**: Gathering info from public data.
 - **Social Engineering**: Manipulating individuals into revealing confidential information.
 - **Dumpster Diving & Shoulder Surfing**: Physically stealing info or observing user input.
@@ -79,14 +76,9 @@ Attackers use AI models like ChatGPT to create highly convincing phishing emails
 
 ---
 
-### ✅ Quick Tips for CEH Exam
-
+### Quick Tips for CEH Exam
 - **Know Phishing Variants**: Understand the differences between spear, whaling, pharming, etc.
 - **Identify Tools Used in Attacks**: Know at least 2 tools per category (e.g., SET, Shellphish).
 - **Recognize AI Threats**: Deepfakes, voice cloning, and AI-written emails are major red flags.
 - **Understand Identity Theft**: Know types and real-world indicators.
 - **Memorize Information Gathering Techniques**: These can show up in scenario-based questions.
-
-#### 💡Quick Answer Samples:
-- **Know what each identity theft type targets**: Financial = banks, Child = clean credit history, Tax = IRS refunds.
-- **Recognize phishing tool categories**: Shellphish (web-based), SET (framework), Gophish (campaign manager).
