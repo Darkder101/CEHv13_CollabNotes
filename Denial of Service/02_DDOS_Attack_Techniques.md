@@ -47,8 +47,6 @@ Target application processes and mimic normal traffic.
 
 ## ✅ DDoS Attack Techniques
 
-> Detailed Last-Minute Breakdown of All Attacks
-
 ### Volumetric:
 - **UDP Flood**: Random UDP packets consume bandwidth.
 - **ICMP Flood**: Ping requests flood bandwidth.
