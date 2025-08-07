@@ -1,0 +1,123 @@
+# Demonstrate Different DDoS Attack Techniques
+
+---
+
+## Basic Categories of DoS Attack Vectors
+
+### 1. Volumetric Attacks
+Consume bandwidth using massive traffic.
+
+- **UDP Flood Attack**: Sends large numbers of UDP packets to random ports.
+- **ICMP Flood Attack**: Overwhelms the target with ICMP Echo Requests (ping).
+- **Ping of Death**: Sends malformed or oversized ping packets to crash systems.
+- **Smurf Attack**: ICMP packets sent to broadcast IPs with spoofed source (victim), causing all replies to flood the victim.
+- **Pulse Wave Attack**: Alternates between attack and silence to confuse mitigation systems.
+- **Zero-day Attack**: Exploits unknown vulnerabilities to cause unexpected overloads.
+- **Malformed IP Packet Flood**: Sends packets with bad headers, confusing the system.
+- **Spoofed IP Packet Flood**: Uses fake IP addresses to send massive packets, hiding the real attacker.
+- **NTP Amplification Attack**: Spoofs the victim’s IP to NTP servers which send huge replies, amplifying attack volume.
+
+---
+
+### 2. Protocol Attacks
+Exhaust server resources by exploiting protocol weaknesses.
+
+- **SYN Flood**: Sends repeated TCP connection requests without completing the handshake.
+- **Fragmentation Attacks**: Send fragmented packets that overload reassembly processes.
+- **Spoofed Session Floods**: Imitate existing sessions with fake data to confuse servers.
+- **ACK Flood**: Sends fake ACK packets to flood firewall/state tables.
+- **SYN-ACK Flood**: Overwhelms server with SYN-ACK replies (response to spoofed SYNs).
+- **ACK and PUSH-ACK Floods**: Sends high volumes of TCP packets with ACK/PSH flags.
+- **TCP Connection Flood**: Opens many connections, then holds them open.
+- **TCP State Exhaustion**: Consumes all available TCP sessions/states on server/firewall.
+- **RST Attacks**: Sends TCP Reset (RST) flags to tear down legitimate connections.
+- **TCP SACK Panic Attack**: Exploits TCP Selective ACK (SACK) feature to crash Linux systems.
+
+---
+
+### 3. Application Layer Attacks
+Target application processes and mimic normal traffic.
+
+- **HTTP Flood Attack**: Floods the web server with legitimate-looking HTTP requests.
+- **Slowloris Attack**: Opens many HTTP connections and sends headers slowly to exhaust resources.
+- **UDP Application Layer Flood**: Sends malformed or high-volume app-level UDP packets.
+- **DDoS Extortion Attack**: Threat of DDoS unless ransom is paid (ransom-based DDoS).
+
+---
+
+## ✅ DDoS Attack Techniques
+
+> Detailed Last-Minute Breakdown of All Attacks
+
+### Volumetric:
+- **UDP Flood**: Random UDP packets consume bandwidth.
+- **ICMP Flood**: Ping requests flood bandwidth.
+- **Ping of Death**: Crashes system with oversized pings.
+- **Smurf**: Amplified ICMP flood using broadcast addresses.
+- **Pulse Wave**: Burst + idle cycles to bypass detection.
+- **Zero-Day**: Leverages unknown vulnerability.
+- **Malformed IP Packets**: Broken packets overload parsing logic.
+- **Spoofed IP Packets**: Fake IPs increase attack stealth.
+- **NTP Amplification**: Small request triggers large response.
+
+### Protocol:
+- **SYN Flood**: Half-open TCP handshakes overload system.
+- **Fragmentation**: Overloads by forcing reassembly.
+- **Spoofed Sessions**: Sends data using fake session info.
+- **ACK Flood**: Floods stateful devices/firewalls.
+- **SYN-ACK Flood**: Responses to spoofed SYNs, exhaust server.
+- **ACK/PUSH-ACK Flood**: Mimics real traffic to confuse WAFs.
+- **TCP Conn Flood**: Opens multiple TCP sessions.
+- **TCP State Exhaustion**: Crashes firewalls by using up state tables.
+- **RST Attack**: Abruptly tears down sessions.
+- **SACK Panic**: Kernel panic via TCP SACK vulnerability.
+
+### Application:
+- **HTTP Flood**: Abuses normal-looking HTTP requests.
+- **Slowloris**: Holds sockets open with partial headers.
+- **UDP App Flood**: Overloads app services via UDP.
+- **Extortion**: Threat-based attack for ransom.
+
+---
+
+## DDoS Attack Toolkits
+
+Used to automate DDoS attacks.
+
+- **ISB**: Internet Security Booster – includes flooding tools
+- **ultraDDOS-v2**: CLI-based DDoS launcher
+- **LOIC** (Low Orbit Ion Cannon)
+- **HOIC** (High Orbit Ion Cannon)
+- **Botnets like Mirai**: Infect IoT devices for DDoS
+- **RUDY** (R-U-Dead-Yet): Slow HTTP POST DDoS
+- **Xerxes**: DDoS tool targeting web servers
+
+---
+
+## ✅ Quick Tip for CEH Exam
+
+1. **Three Categories of DDoS Attacks**:
+   - **Volumetric**: Bandwidth exhaustion (e.g., UDP, ICMP flood)
+   - **Protocol**: Exploit network stack (e.g., SYN, ACK floods)
+   - **Application Layer**: Target app logic (e.g., HTTP flood)
+
+2. **Key Attack Vectors**:
+   - **Smurf**: Uses ICMP broadcast
+   - **Slowloris**: Slow header sends to tie up server
+   - **NTP Amplification**: Response > Request size (amplification)
+
+3. **SYN Flood vs. TCP State Exhaustion**:
+   - SYN Flood: Incomplete handshakes
+   - TCP State Exhaustion: Overwhelms connection tracking
+
+4. **DDoS Toolkits**:
+   - **LOIC/HOIC**: Easy to use, common in amateur attacks
+   - **Mirai**: IoT-based botnet for large-scale attacks
+
+5. **Zero-Day DDoS**:
+   - Unexpected, often unmitigated due to new vulnerabilities
+
+6. **Remember**:
+   - DDoS can be blended: multiple vectors at once
+   - Application-layer attacks often bypass basic filters
+
