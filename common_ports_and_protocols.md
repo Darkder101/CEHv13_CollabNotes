@@ -1,40 +1,63 @@
-# 📌 Common Ports and Protocols – CEH v13 Exam Reference
----
-## CEH v13 – Essential Ports to Remember
+# CEH v13 – Essential Ports to Remember
+## Well-Known Ports (0-1023)
 
-| Port       | Protocol         | Transport | Description                     | Common Attacks / Tools             |
-| ---------- | ---------------- | --------- | -------------------------------- | ----------------------------------- |
-| 20, 21     | FTP              | TCP       | File transfers (data/control)   | Brute force, sniffing               |
-| 22         | SSH              | TCP       | Secure remote login              | Hydra, SSH key attacks              |
-| 23         | Telnet           | TCP       | Unencrypted remote login         | Banner grabbing, credential sniffing|
-| 25         | SMTP             | TCP       | Email sending                    | Mail spoofing, relay abuse          |
-| 53         | DNS              | TCP/UDP   | Domain resolution                | DNS poisoning, zone transfer        |
-| 67, 68     | DHCP             | UDP       | IP assignment                    | Rogue DHCP, DHCP starvation         |
-| 69         | TFTP             | UDP       | Trivial file transfer            | Config file theft, firmware dumps   |
-| 80         | HTTP             | TCP       | Web traffic                      | SQLi, XSS, web app attacks          |
-| 110        | POP3             | TCP       | Email retrieval                  | Credential sniffing, brute force    |
-| 111        | RPCbind          | TCP/UDP   | RPC mapping                      | RPC enumeration                     |
-| 123        | NTP              | UDP       | Network time protocol            | NTP amplification DDoS              |
-| 135        | MS RPC           | TCP       | Microsoft RPC endpoint mapper    | DCOM exploitation, RPC attacks      |
-| 137–139    | NetBIOS          | TCP/UDP   | File/printer sharing             | Name poisoning, SMB over NetBIOS    |
-| 143        | IMAP             | TCP       | Email access                     | Email credential attacks            |
-| 161, 162   | SNMP             | UDP       | Network management               | snmpwalk, community string attacks  |
-| 389        | LDAP             | TCP/UDP   | Directory services               | LDAP injection, enumeration         |
-| 443        | HTTPS            | TCP       | Secure web traffic               | SSL/TLS attacks, cert bypass        |
-| 445        | SMB              | TCP       | File sharing                     | EternalBlue, SMB relay              |
-| 500        | ISAKMP/IKE       | UDP       | VPN negotiation                  | VPN MITM, IKE scanning              |
-| 514        | Syslog           | UDP       | Logging                          | Log injection, DoS                  |
-| 993, 995   | Secure IMAP/POP3 | TCP       | Encrypted email                  | Email SSL/TLS attacks               |
-| 1433, 1434 | MS SQL Server    | TCP/UDP   | Databases                        | SQL injection, brute force          |
-| 1521       | Oracle TNS       | TCP       | Oracle database listener         | TNS poisoning, SQL injection        |
-| 3306       | MySQL            | TCP       | MySQL database                   | SQL injection, brute force          |
-| 3389       | RDP              | TCP       | Remote desktop                   | RDP brute force, BlueKeep           |
-| 5432       | PostgreSQL       | TCP       | PostgreSQL database              | SQL injection                       |
-| 5900       | VNC              | TCP       | Remote control                   | VNC password brute force            |
-| 8080       | HTTP Alternate   | TCP       | Proxies/web apps                 | Web proxy bypass, web attacks       |
+| Port | Protocol | Transport | Description | Common Attacks |
+|------|----------|-----------|-------------|----------------|
+| 20/21 | FTP | TCP | File Transfer Protocol | Brute force attacks, Directory traversal, Bounce attacks, Anonymous access abuse |
+| 22 | SSH | TCP | Secure Shell | Brute force attacks, Dictionary attacks, SSH tunneling abuse, Weak key exploitation |
+| 23 | Telnet | TCP | Telnet Remote Login | Password sniffing, Session hijacking, Man-in-the-middle attacks |
+| 25 | SMTP | TCP | Simple Mail Transfer Protocol | Email spoofing, SMTP relay abuse, Buffer overflow attacks |
+| 53 | DNS | TCP/UDP | Domain Name System | DNS poisoning, DNS spoofing, DNS tunneling, Cache poisoning |
+| 67/68 | DHCP | UDP | Dynamic Host Configuration Protocol | DHCP starvation, Rogue DHCP server attacks, IP address spoofing |
+| 69 | TFTP | UDP | Trivial File Transfer Protocol | Directory traversal, Unauthorized file access, Configuration file theft |
+| 79 | Finger | TCP | Finger Protocol | Information disclosure, User enumeration, System reconnaissance |
+| 80 | HTTP | TCP | HyperText Transfer Protocol | SQL injection, Cross-site scripting (XSS), Directory traversal, Session hijacking |
+| 110 | POP3 | TCP | Post Office Protocol v3 | Password sniffing, Brute force attacks, Email theft |
+| 111 | RPC | TCP/UDP | Remote Procedure Call | RPC enumeration, Buffer overflow attacks, Service abuse |
+| 135 | RPC | TCP | RPC Endpoint Mapper | RPC attacks, Buffer overflow, Service enumeration |
+| 137/138/139 | NetBIOS | TCP/UDP | Network Basic Input/Output System | Null session attacks, Share enumeration, Password cracking |
+| 143 | IMAP | TCP | Internet Message Access Protocol | Password sniffing, Brute force attacks, Email theft |
+| 161/162 | SNMP | UDP | Simple Network Management Protocol | SNMP enumeration, Community string attacks, Information disclosure |
+| 389 | LDAP | TCP | Lightweight Directory Access Protocol | LDAP injection, Directory traversal, Information disclosure |
+| 443 | HTTPS | TCP | HTTP Secure | SSL/TLS attacks, Certificate spoofing, Downgrade attacks |
+| 445 | SMB | TCP | Server Message Block | EternalBlue exploit, Pass-the-hash attacks, SMB relay attacks |
+| 993 | IMAPS | TCP | IMAP Secure | Certificate attacks, Downgrade attacks, Brute force |
+| 995 | POP3S | TCP | POP3 Secure | Certificate attacks, Downgrade attacks, Brute force |
+
+## Registered Ports (1024-49151)
+
+| Port | Protocol | Transport | Description | Common Attacks |
+|------|----------|-----------|-------------|----------------|
+| 1433 | MSSQL | TCP | Microsoft SQL Server | SQL injection, Buffer overflow, Brute force attacks |
+| 1521 | Oracle | TCP | Oracle Database | SQL injection, TNS poisoning, Buffer overflow attacks |
+| 2049 | NFS | TCP/UDP | Network File System | NFS enumeration, File system access, Mount hijacking |
+| 3306 | MySQL | TCP | MySQL Database | SQL injection, Brute force attacks, Privilege escalation |
+| 3389 | RDP | TCP | Remote Desktop Protocol | Brute force attacks, BlueKeep exploit, Session hijacking |
+| 5060/5061 | SIP | TCP/UDP | Session Initiation Protocol | Call hijacking, Registration hijacking, Eavesdropping |
+| 5432 | PostgreSQL | TCP | PostgreSQL Database | SQL injection, Brute force attacks, Privilege escalation |
+| 5900 | VNC | TCP | Virtual Network Computing | Password cracking, Screen hijacking, Remote access abuse |
+| 6379 | Redis | TCP | Redis Database | Unauthorized access, Data exfiltration, Command injection |
+| 8080 | HTTP-Alt | TCP | HTTP Alternative Port | Proxy abuse, SQL injection, Cross-site scripting |
+| 8443 | HTTPS-Alt | TCP | HTTPS Alternative Port | SSL/TLS attacks, Certificate spoofing, Man-in-the-middle |
+
+## Dynamic/Private Ports (49152-65535)
+
+| Port Range | Protocol | Transport | Description | Common Attacks |
+|------------|----------|-----------|-------------|----------------|
+| 49152-65535 | Various | TCP/UDP | Dynamic/Private Ports | Port scanning, Service fingerprinting, Backdoor communication |
+
+## Trojan/Backdoor Ports (Common Examples)
+
+| Port | Protocol | Transport | Description | Common Attacks |
+|------|----------|-----------|-------------|----------------|
+| 31337 | Back Orifice | TCP | Back Orifice Remote Access Trojan | Remote access trojan, System control, Data exfiltration |
+| 12345 | NetBus | TCP | NetBus Remote Access Trojan | Remote access trojan, Keylogging, File theft |
+| 1243 | Sub7 | TCP | Sub7 Remote Access Trojan | Remote access trojan, System monitoring, Backdoor access |
+| 9999 | Various RATs | TCP | Generic RAT Communication | Remote access, Command execution, Data theft |
+| 54321 | Back Orifice 2K | TCP | Back Orifice 2000 | System control, File manipulation, Network pivoting |
 
 ---
-## 🔹 Essential TCP/UDP Ports & Protocols (Knowledge Reference)
+# Essential TCP/UDP Ports & Protocols (Knowledge Reference)
 
 | Port | Protocol | Transport | Description | Common Attacks / Tools |
 |------|----------|-----------|-------------|------------------------|
@@ -168,7 +191,7 @@
 
 ---
 
-## 🔹 Well-Known Port Ranges
+## Well-Known Port Ranges
 
 | Range | Description | Security Implications |
 |-------|-------------|---------------------|
@@ -178,7 +201,7 @@
 
 ---
 
-## 🔹 Protocol Categories for CEH v13
+## Protocol Categories for CEH v13
 
 ### **Database Protocols**
 - **1433** - Microsoft SQL Server
@@ -238,67 +261,41 @@
 - **2375/2376** - Docker Daemon
 
 ---
+## Important Protocol-Specific Attack Categories
 
-## 🔹 CEH v13 Exam Attack Vectors by Port
+### Web Services (80, 443, 8080, 8443)
+- SQL Injection
+- Cross-Site Scripting (XSS)
+- Cross-Site Request Forgery (CSRF)
+- Directory Traversal
+- Session Hijacking
+- Parameter Tampering
 
-### **High-Risk Ports (Frequent Exam Topics)**
-- **21 (FTP)** - Anonymous login, brute force
-- **22 (SSH)** - Key-based attacks, user enumeration  
-- **23 (Telnet)** - Credential sniffing
-- **25 (SMTP)** - Email spoofing, open relay
-- **53 (DNS)** - Zone transfer, cache poisoning
-- **80/443 (HTTP/S)** - Web application attacks
-- **135 (RPC)** - DCOM exploitation
-- **139/445 (SMB)** - EternalBlue, relay attacks
-- **161 (SNMP)** - Community string attacks
-- **389 (LDAP)** - LDAP injection
-- **1433 (MSSQL)** - SQL injection
-- **3389 (RDP)** - Remote desktop brute force
+### Database Services (1433, 1521, 3306, 5432)
+- SQL Injection
+- Privilege Escalation
+- Data Exfiltration
+- Brute Force Authentication
+- Buffer Overflow
 
-### **IoT/Modern Service Ports**
-- **1883** - MQTT (IoT messaging)
-- **5683** - CoAP (Constrained application)
-- **6379** - Redis (In-memory database)
-- **9200** - Elasticsearch (Search engine)
-- **27017** - MongoDB (Document database)
+### Remote Access Services (22, 23, 3389, 5900)
+- Brute Force Attacks
+- Dictionary Attacks
+- Session Hijacking
+- Man-in-the-Middle
+- Credential Sniffing
 
----
+### Email Services (25, 110, 143, 993, 995)
+- Email Spoofing
+- Phishing Attacks
+- Password Sniffing
+- Relay Abuse
+- Header Injection
 
-## 🔹 Quick Command Reference
-
-### **Port Scanning**
-```bash
-# Basic port scan
-nmap -p- target
-
-# Service version detection
-nmap -sV -p 21,22,23,25,53,80,110,443,993,995 target
-
-# Top 1000 ports
-nmap --top-ports 1000 target
-```
-
-### **Service Enumeration**
-```bash
-# Banner grabbing
-nc -nv target 21
-telnet target 25
-
-# SNMP enumeration
-snmpwalk -c public -v1 target
-
-# SMB enumeration
-enum4linux target
-```
-
----
-
-## 🔹 Exam Tips
-- **Memorize common ports:** 21, 22, 23, 25, 53, 80, 110, 443, 993, 995
-- **Know attack vectors** for each major service
-- **Understand protocol differences** (TCP vs UDP)
-- **Practice banner grabbing** and service identification
-- **Focus on database ports** (1433, 3306, 5432, 27017)
-- **Remember alternative ports** (8080, 8443, 2121)
-
+### Network Services (53, 67/68, 161/162)
+- Poisoning Attacks
+- Spoofing Attacks
+- Information Disclosure
+- Service Enumeration
+- Protocol Abuse
 ---
