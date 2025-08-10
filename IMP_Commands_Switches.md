@@ -1,9 +1,5 @@
 # ⚡ CEH v13 — Main Tools Deep Dive (Commands & Key Switches)
 
-> Focused, exam-oriented deep-dive for the main CEH tools: **nmap, Wireshark/tshark, Metasploit (msfconsole/msfvenom), sqlmap, Burp Suite, netcat, hashcat, aircrack-ng, gobuster**.  
-> 
-> **⚠️ DISCLAIMER: Use responsibly — only against authorized targets and in legal penetration testing scenarios.**
-
 ## 📋 Table of Contents
 
 - [Nmap (Network Discovery)](#-nmap---network-discovery)
@@ -480,14 +476,7 @@ aireplay-ng --deauth 10 -a <AP_BSSID> -c <CLIENT> wlan0mon
 # crack
 aircrack-ng capture-01.cap -w wordlist.txt -b <AP_BSSID>
 ```
-
 ---
-
-## ⚖️ Legal Disclaimer
-
-**IMPORTANT:** This guide is for educational purposes and authorized penetration testing only. Always ensure you have explicit written permission before testing any systems. Unauthorized access to computer systems is illegal and unethical. The authors are not responsible for any misuse of this information.
-
-## 📚 Additional Resources
 
 - [CEH Official Courseware](https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/)
 - [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
