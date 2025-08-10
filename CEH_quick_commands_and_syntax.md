@@ -1,4 +1,4 @@
-# ⚡ CEH Quick Commands & Syntax – High-Yield
+# ⚡ CEH Quick Commands & Syntax
 
 This file contains **must-know commands** for CEH v13.  
 Memorize these exact syntaxes — EC-Council often asks either **“Which command would you run?”** or shows an output and asks **“Which tool produced this?”**.
