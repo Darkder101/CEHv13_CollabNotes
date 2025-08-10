@@ -1,8 +1,4 @@
-# ⚡ CEH v13 — Main Tools Deep Dive (Commands & Key Switches)
-
-> Focused, exam-oriented deep-dive for the main CEH tools: **nmap, Wireshark/tshark, Metasploit (msfconsole/msfvenom), sqlmap, Burp Suite, netcat, hashcat, aircrack-ng, gobuster**.  
-> 
-> **⚠️ DISCLAIMER: Use responsibly — only against authorized targets and in legal penetration testing scenarios.**
+# ⚡ CEH v13 — Main Tools (Commands & Key Switches)
 
 ## 📋 Table of Contents
 
@@ -707,11 +703,6 @@ coap-client -m get coap://192.168.1.100/.well-known/core
 - `portfwd add` - Port forwarding
 
 ---
-
-## ⚖️ Legal Disclaimer
-
-**IMPORTANT:** This guide is for educational purposes and authorized penetration testing only. Always ensure you have explicit written permission before testing any systems. Unauthorized access to computer systems is illegal and unethical. The authors are not responsible for any misuse of this information.
-
 ## 📚 Additional Resources
 
 - [CEH Official Courseware](https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/)
@@ -719,5 +710,3 @@ coap-client -m get coap://192.168.1.100/.well-known/core
 - [OWASP Testing Guide](https://owasp.org/www-project-web-security-testing-guide/)
 
 ---
-
-**Happy Ethical Hacking! 🎯**
