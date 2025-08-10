@@ -1,6 +1,40 @@
 # 📌 Common Ports and Protocols – CEH v13 Exam Reference
 ---
-## 🔹 Essential TCP/UDP Ports & Protocols
+# CEH v13 – Essential Ports to Remember
+
+| Port       | Protocol         | Transport | Description                     | Common Attacks / Tools             |
+| ---------- | ---------------- | --------- | -------------------------------- | ----------------------------------- |
+| 20, 21     | FTP              | TCP       | File transfers (data/control)   | Brute force, sniffing               |
+| 22         | SSH              | TCP       | Secure remote login              | Hydra, SSH key attacks              |
+| 23         | Telnet           | TCP       | Unencrypted remote login         | Banner grabbing, credential sniffing|
+| 25         | SMTP             | TCP       | Email sending                    | Mail spoofing, relay abuse          |
+| 53         | DNS              | TCP/UDP   | Domain resolution                | DNS poisoning, zone transfer        |
+| 67, 68     | DHCP             | UDP       | IP assignment                    | Rogue DHCP, DHCP starvation         |
+| 69         | TFTP             | UDP       | Trivial file transfer            | Config file theft, firmware dumps   |
+| 80         | HTTP             | TCP       | Web traffic                      | SQLi, XSS, web app attacks          |
+| 110        | POP3             | TCP       | Email retrieval                  | Credential sniffing, brute force    |
+| 111        | RPCbind          | TCP/UDP   | RPC mapping                      | RPC enumeration                     |
+| 123        | NTP              | UDP       | Network time protocol            | NTP amplification DDoS              |
+| 135        | MS RPC           | TCP       | Microsoft RPC endpoint mapper    | DCOM exploitation, RPC attacks      |
+| 137–139    | NetBIOS          | TCP/UDP   | File/printer sharing             | Name poisoning, SMB over NetBIOS    |
+| 143        | IMAP             | TCP       | Email access                     | Email credential attacks            |
+| 161, 162   | SNMP             | UDP       | Network management               | snmpwalk, community string attacks  |
+| 389        | LDAP             | TCP/UDP   | Directory services               | LDAP injection, enumeration         |
+| 443        | HTTPS            | TCP       | Secure web traffic               | SSL/TLS attacks, cert bypass        |
+| 445        | SMB              | TCP       | File sharing                     | EternalBlue, SMB relay              |
+| 500        | ISAKMP/IKE       | UDP       | VPN negotiation                  | VPN MITM, IKE scanning              |
+| 514        | Syslog           | UDP       | Logging                          | Log injection, DoS                  |
+| 993, 995   | Secure IMAP/POP3 | TCP       | Encrypted email                  | Email SSL/TLS attacks               |
+| 1433, 1434 | MS SQL Server    | TCP/UDP   | Databases                        | SQL injection, brute force          |
+| 1521       | Oracle TNS       | TCP       | Oracle database listener         | TNS poisoning, SQL injection        |
+| 3306       | MySQL            | TCP       | MySQL database                   | SQL injection, brute force          |
+| 3389       | RDP              | TCP       | Remote desktop                   | RDP brute force, BlueKeep           |
+| 5432       | PostgreSQL       | TCP       | PostgreSQL database              | SQL injection                       |
+| 5900       | VNC              | TCP       | Remote control                   | VNC password brute force            |
+| 8080       | HTTP Alternate   | TCP       | Proxies/web apps                 | Web proxy bypass, web attacks       |
+
+---
+## 🔹 Essential TCP/UDP Ports & Protocols (Knowledge Reference)
 
 | Port | Protocol | Transport | Description | Common Attacks / Tools |
 |------|----------|-----------|-------------|------------------------|
