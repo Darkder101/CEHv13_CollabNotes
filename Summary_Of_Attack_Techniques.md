@@ -1,7 +1,8 @@
-# CEH Attack Techniques
+# CEH v13 Attack Techniques & Tool Cross-Reference
 
-This file covers **attack types and their sub-types** for CEH v13, including OWASP Top 10 and modern attack vectors.  
-Use it to quickly identify an attack from a scenario and recall detection & prevention methods.
+This document covers:
+1. **Attack Types & Subtypes** .
+2. **Tool Quick-Reference Table**.
 
 ---
 
@@ -200,5 +201,40 @@ Use it to quickly identify an attack from a scenario and recall detection & prev
 - **IoT exploitation** – Default credentials, firmware exploits, API abuse  
 - **SCADA/ICS attacks** – Modbus spoofing, Stuxnet-style attacks, unauthorized command injection  
 - **Physical tampering with sensors/actuators**  
+
+---
+
+# 📊 CEH Attack Type ↔ Tool Cross-Reference Table
+
+| **Attack Type**                         | **Primary Tool**           | **Alternate Tool(s)**                           |
+|------------------------------------------|-----------------------------|-------------------------------------------------|
+| Find emails / employee info (OSINT)     | theHarvester                | Hunter.io, Netcraft                            |
+| Find subdomains / DNS mapping           | subfinder                   | dnsrecon, dnsdumpster.com                      |
+| Domain registration info                | whois                       | Netcraft                                       |
+| Query DNS records                       | dig / nslookup              | dnsrecon -t axfr                               |
+| Port scanning                           | nmap -sV                    | rustscan (+ nmap deep scan)                    |
+| Enumerate SMB shares / Windows info     | enum4linux                  | smbclient, nbtstat                             |
+| SNMP information                        | snmpwalk                    | nmap --script=snmp*                            |
+| NTP trace                               | ntptrace                    | —                                               |
+| Exploit vulnerable service              | msfconsole                  | searchsploit                                    |
+| Create payload                          | msfvenom                     | Veil-Evasion                                   |
+| Brute-force credentials                 | hydra                        | Medusa                                         |
+| SQL Injection                           | sqlmap                       | Havij                                          |
+| Open reverse shell                      | netcat                       | msfconsole payload                             |
+| Analyze captured traffic                | Wireshark                    | tshark                                         |
+| Detect CMS / technology                 | Wappalyzer                   | whatweb                                        |
+| Bypass / Detect WAF                     | wafw00f                      | —                                               |
+| Intercept HTTP requests                 | Burp Suite                   | OWASP ZAP                                      |
+| Directory brute-force                   | gobuster                     | dirb                                           |
+| Capture WPA handshake                   | airodump-ng                  | Kismet                                         |
+| Crack WPA key                           | aircrack-ng                  | hashcat, john                                  |
+| Phishing / Clone login page             | zphisher                     | setoolkit                                      |
+| Trick victim into enabling webcam       | camphish                     | —                                               |
+| Crack hash                              | hashcat                      | john the ripper                                |
+| Generate hash                           | md5sum / hashcalc            | CyberChef                                      |
+| HTTP DoS                                | goldeneye                    | LOIC, HOIC                                     |
+| Detect intrusion                        | Snort                        | Suricata                                       |
+| Vulnerability scanning                  | Nessus Essentials            | OpenVAS                                        |
+| Deploy honeypot                         | HoneyBot                     | pentbox                                        |
 
 ---
