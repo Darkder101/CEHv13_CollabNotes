@@ -601,5 +601,3 @@ Session hijacking is the exploitation of a valid computer session where an attac
 - [ ] Configure secure session management
 
 ---
-
-**Note**: This comprehensive guide covers all essential session hijacking concepts for CEH v13. Focus on understanding the practical application of tools and techniques, as the exam emphasizes hands-on knowledge alongside theoretical concepts.
