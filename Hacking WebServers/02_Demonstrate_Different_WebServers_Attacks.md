@@ -13,7 +13,7 @@
 10. [DoS/DDoS Attacks](#dosddos-attacks)
 11. [Man in the Middle Attack](#man-in-the-middle-attack)
 12. [Phishing Attack](#phishing-attack)
-13. [Additional Webserver Attacks](#additional-webserver-attacks)
+13. [Additional Webserver Attacks](#WebSocket-Security-Issues)
 
 ---
 
